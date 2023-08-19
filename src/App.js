@@ -7,15 +7,14 @@ import Create from './pages/Create';
 
 function App() {
   return (
-    // <Router>
+    <Router>
       <Grid>
-        <Home></Home>
-        {/* <Routes>
+        <Routes>
           <Route path='/' element = {<Home></Home>} ></Route>
-          <Route path='https://prateeks7.github.io/AfterImage/Create' element = {<Create></Create>} ></Route>
-        </Routes> */}
+          <Route path='/Create' element = {<Create></Create>} ></Route>
+        </Routes>
       </Grid>
-    /* </Router> */
+    </Router>
   );
 }
 
