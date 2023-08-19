@@ -1,0 +1,14 @@
+.cardCss
+{
+    border-color: rgb(230,0,126);
+    border-width: 2px;
+    background-color: black;
+}
+.cardBg
+{
+    background-color: black;
+}
+.imgCss
+{
+    mask-image: linear-gradient(rgba(0, 0, 0, 1) 80%, transparent);
+}

@@ -1,0 +1,49 @@
+.cardCss
+{
+    border-color: rgb(230,0,126);
+    border-width: 2px;
+    background-color: black;
+}
+.cardBg
+{
+    background-color: black;
+}
+.imgCss
+{
+    mask-image: linear-gradient(rgba(0, 0, 0, 1) 80%, transparent);
+}
+.formText
+{
+        font-family: "serif", "Didot";
+        color: white;
+        font-size: 3vh;
+        text-align: center;
+}
+.inputNameCss
+{
+        font-family: "serif", "Didot";
+        font-size: 3vh;
+        text-align: center;
+        border-color: rgb(230,0,126);
+        border-radius: 100px;
+}
+textarea
+{
+        font-family: "serif", "Didot";
+        font-size: 2.5vh;
+        text-align: center;
+        border-color: rgb(230,0,126);
+        border-radius: 10px;
+}
+.formBtnCss
+{
+    color: rgb(230,0,126);
+    border-color: rgb(230,0,126);
+}
+.formBtnCss:hover
+{
+
+    color: rgb(230,0,126);
+    border-color: rgb(230,0,126);
+
+}

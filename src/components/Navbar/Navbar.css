@@ -1,0 +1,14 @@
+.logoSize
+{
+    max-height: 7vh;
+}
+.navBtnCss
+{
+    color: rgb(230,0,126);
+    border-color: rgb(230,0,126);
+}
+.navBtnCss:hover
+{
+    color: rgb(230,0,126);
+    border-color: rgb(230,0,126);
+}

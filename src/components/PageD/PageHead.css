@@ -1,0 +1,10 @@
+h1::first-letter
+{
+    initial-letter: 3 2;
+}
+h1{
+    font-family: "Cursive", "Lucida Handwriting";
+    color: rgb(230,0,126);
+    font-size: 5vh;
+    display: inline-block;
+}
