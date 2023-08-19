@@ -13,7 +13,7 @@ function Navbar(props)
             </Link>
             <Link to={props.children === 'Create' ? '/Create' : '/'}>
             <div className='p-4'>
-                <button type="button" class="btn navBtnCss btn-lg">{props.children}</button>
+                <button type="button" className="btn navBtnCss btn-lg">{props.children}</button>
             </div>
             </Link>
         </div>

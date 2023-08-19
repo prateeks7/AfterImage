@@ -16,7 +16,7 @@ function CreateForm()
                         <textarea  rows="1" cols="50"></textarea>
                         <br></br>
                         <br></br>
-                        <button type="button" class="btn formBtnCss btn-lg">Generate</button>
+                        <button type="button" className="btn formBtnCss btn-lg">Generate</button>
                     </form>
                 </div>
             </div>

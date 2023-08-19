@@ -9,7 +9,7 @@ function Home()
         <>
         <PageHead>Comunity Gallery</PageHead>
         <PageD>
-        Welcome to After Image Comunity.
+            Welcome to After Image Comunity.
                     <br></br>
                     Join our creative space where the magic of artificial intelligence meets the world of captivating visuals. This community is a hub for all things imaginative and innovative, where you can explore, share, and collaborate on AI-generated images that push the boundaries of creativity.
                     <br></br>
