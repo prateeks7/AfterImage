@@ -10,8 +10,8 @@ function App() {
     <Router>
       <Grid>
         <Routes>
-          <Route path='AfterImage/' element = {<Home></Home>} ></Route>
-          <Route path='AfterImage/Create' element = {<Create></Create>} ></Route>
+          <Route path='/AfterImage/' element = {<Home></Home>} ></Route>
+          <Route path='/AfterImage/Create' element = {<Create></Create>} ></Route>
         </Routes>
       </Grid>
     </Router>
