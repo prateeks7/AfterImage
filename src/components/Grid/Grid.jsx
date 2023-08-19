@@ -6,7 +6,7 @@ function Grid(props)
     const { pathname } = useLocation();
     return(
         <>
-        <Navbar>{pathname === '/' ? "Create" : "Comunity" }</Navbar>
+        <Navbar>{pathname === '/AfterImage/' ? "Create" : "Comunity" }</Navbar>
         <div className="container-fluid justify-content-center">
             <div className="row p-3">
                    {props.children}
