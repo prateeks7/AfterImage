@@ -8,12 +8,12 @@ function CreateForm()
                     <form align="center">
                         <label className='formText'>Name:</label>
                         <br></br>
-                        <input type='text' className='inputNameCss'></input>
+                        <input type='text' className='inputNameCss form-control-center'></input>
                         <br></br>
                         <br></br>
                         <label className='formText' >Description:</label>
                         <br></br>
-                        <textarea  rows="1" cols="50"></textarea>
+                        <textarea className="form-control inputDesCss"></textarea>
                         <br></br>
                         <br></br>
                         <button type="button" className="btn formBtnCss btn-lg">Generate</button>
