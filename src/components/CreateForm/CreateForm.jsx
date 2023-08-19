@@ -2,7 +2,7 @@ import './CreateForm.css';
 function CreateForm()
 {
     return(
-        <div className='col-sm-12 col-xl-6 col-xxl-6 p-3' >
+        <div className='col-sm-12 col-md-12 col-xl-12 col-xxl-6 p-3' >
             <div className="card cardCss" >
                 <div className="card-body cardBg text-white">
                     <form align="center">
