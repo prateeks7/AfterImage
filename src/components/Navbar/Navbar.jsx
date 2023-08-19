@@ -11,7 +11,7 @@ function Navbar(props)
                     <img src={logo} alt='logo' className='img-fluid logoSize' />
                 </div>
             </Link>
-            <Link to={props.children === '/AfterImage/' ? '/AfterImage/Create' : '/AfterImage/'}>
+            <Link to={props.children === 'Create' ? '/AfterImage/Create' : '/AfterImage/'}>
             <div className='p-4'>
                 <button type="button" className="btn navBtnCss btn-lg">{props.children}</button>
             </div>
