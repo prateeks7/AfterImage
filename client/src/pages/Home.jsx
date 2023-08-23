@@ -2,19 +2,16 @@ import PageHead from "../components/PageHead";
 import PageD from "../components/PageD";
 import Card from "../components/Card";
 import { useEffect, useState } from "react";
-import NoPost from "../components/NoPost";
+import AltPostMessage from "../components/AltPostMessage";
 
 const RenderCards = (data) => {
-    if(data.length > 0) 
-    {return data.map((item) => <Card prompt={item.prompt} name={item.name} imgUrl={item.photo}></Card>);}
-    else
-    {return <NoPost></NoPost>}
+    return data.map((item) => <Card prompt={item.prompt} name={item.name} imgUrl={item.photo}></Card>);
 }
 
 function Home()
 {
     const [data, changeData] = useState([]);
-
+    const [isLoading,changeLoading] = useState(true);
     useEffect(()=> {
         const getData = async () => {
             const response = await fetch('https://afterimage.onrender.com/api/v1/post',{
@@ -22,6 +19,7 @@ function Home()
             });
             const result = await response.json();
             changeData(result.data.reverse());
+            changeLoading(false);
         }
         getData();
     },[]);
@@ -38,7 +36,11 @@ function Home()
                     Create Your Imagination And Share
         </PageD>
         {
-            RenderCards(data)
+            isLoading ?
+            <AltPostMessage type="loading"></AltPostMessage>
+            :
+            (data.length != 0 ? RenderCards(data) :  <AltPostMessage type="empty"></AltPostMessage>)
+            
         }
         </>
     );
