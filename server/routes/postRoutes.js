@@ -1,7 +1,6 @@
 import express from "express";
 import * as dotenv from 'dotenv';
 import Post from "../mongodb/models/post.js";
-import { ChatCompletionResponseMessageRoleEnum } from "openai";
 
 dotenv.config();
 const router = express.Router();
