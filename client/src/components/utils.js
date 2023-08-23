@@ -1,6 +1,5 @@
 import logo from '../assets/logo.png'
 const getImage = async (formPrompt) => {
-    console.log(formPrompt);
     if (formPrompt != "") {
         {
             try {
@@ -12,7 +11,6 @@ const getImage = async (formPrompt) => {
                     body: JSON.stringify({ prompt: formPrompt })
                 });
                 const data = JSON.parse(await response.json());
-                console.log(data);
                 return data.output[0];
             }
             catch (err) {
@@ -28,7 +26,6 @@ const getImage = async (formPrompt) => {
 const postImage = async ({name,formPrompt,imgUrl},navigate) => {
     
     if (name != "" && formPrompt != "" && imgUrl != logo) {
-        console.log("TryPost");
         try {
             const response = await fetch('http://localhost:1000/api/v1/post', {
                 method: 'POST',

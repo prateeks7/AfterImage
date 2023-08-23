@@ -8,7 +8,6 @@ const router = express.Router();
 router.route('/').get(async (req,res) => {
     try{
         const posts = await Post.find({});
-    // console.log(posts);
 
         res.status(200).json({success:true,data:posts});
     }
@@ -26,7 +25,6 @@ router.route('/').post(async (req,res) =>
         prompt,
         photo,
     });
-    // console.log(newPost);
     res.status(200).json({success:true,data:newPost});}
     catch(err){
         res.status(500).send({success:true,message:err});

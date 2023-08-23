@@ -9,8 +9,6 @@ import bodyParser from 'body-parser';
 dotenv.config();
 
 const app = express();
-// app.use(bodyParser.urlencoded({extended: false}));
-// app.use(bodyParser.json());
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
@@ -19,7 +17,6 @@ app.use('/api/v1/ai', aiRoutes);
 
 
 try{
-    console.log(process.env.MONGODB_URL);
     connectDB(process.env.MONGODB_URL);
 }
 catch (error) {
