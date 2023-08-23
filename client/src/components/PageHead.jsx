@@ -1,4 +1,4 @@
-import './PageHead.css';
+import './styles/PageHead.css';
 function PageHead(props) {
     return (
         <div className="col-12 justify-content-center p-5 row">

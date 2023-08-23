@@ -26,6 +26,7 @@
         text-align: center;
         border-color: rgb(230,0,126);
         border-radius: 100px;
+        max-width: 40vh;
 }
 .inputDesCss
 {
@@ -35,6 +36,8 @@
         text-align: center;
         border-color: rgb(230,0,126);
         border-radius: 50px;
+        max-width: 80vh;
+
 }
 textarea
 {
@@ -51,8 +54,12 @@ textarea
 }
 .formBtnCss:hover
 {
-
     color: rgb(230,0,126);
     border-color: rgb(230,0,126);
+}
+.gImageCss{
 
+    height: 15vh;
+    border: 1px solid;
+    border-color: rgb(230,0,126);
 }

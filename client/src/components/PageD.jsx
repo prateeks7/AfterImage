@@ -1,4 +1,4 @@
-import './PageD.css';
+import './styles/PageD.css';
 function PageD(props) {
     return (
         <div className="col-sm-12 col-md-12 col-xl-12 col-xxl-6 p-3">

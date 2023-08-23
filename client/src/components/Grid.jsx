@@ -1,4 +1,4 @@
-import Navbar from "../Navbar/Navbar";
+import Navbar from "./Navbar";
 import { useLocation } from "react-router-dom";
 
 function Grid(props)
@@ -6,10 +6,10 @@ function Grid(props)
     const { pathname } = useLocation();
     return(
         <>
-        <Navbar>{pathname === '/AfterImage/' || pathname === '/AfterImage' ? "Create" : "Comunity" }</Navbar>
+        <Navbar>{pathname === '/' || pathname === '/' ? "Create" : "Community" }</Navbar>
         <div className="container-fluid justify-content-center">
             <div className="row p-3">
-                   {props.children}
+                {props.children}
             </div>
         </div>
         </>
