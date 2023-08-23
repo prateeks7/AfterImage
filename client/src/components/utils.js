@@ -35,7 +35,7 @@ const postImage = async ({name,formPrompt,imgUrl},navigate) => {
                 body: JSON.stringify({ name: name, prompt: formPrompt, photo: imgUrl })
             })
             await response.json();
-            navigate('/');
+            navigate('/AfterImage/');
         }
         catch (err) {
             alert(err);
