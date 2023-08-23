@@ -17,7 +17,7 @@ function Home()
 
     useEffect(()=> {
         const getData = async () => {
-            const response = await fetch('http://localhost:1000/api/v1/post',{
+            const response = await fetch('https://afterimage.onrender.com/api/v1/post',{
                 method: 'GET',
             });
             const result = await response.json();
