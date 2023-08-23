@@ -1,4 +1,3 @@
-import {useState } from "react";
 import loader from '../assets/loading.svg';
 import {getImage,postImage} from './utils.js';
 import { useNavigate } from 'react-router-dom';
@@ -14,9 +13,13 @@ function Form(props) {
             props.isLoading.changeLoading(true);
             props.displayImg.changeDisplayImg(true);
             const url = await getImage(props.formPrompt)
-            if (url != null) 
+            if (url !== null) 
             {
                 props.imgUrl.changeImgUrl(url);
+            }
+            else
+            {
+                props.displayImg.changeDisplayImg(false);
             }
         }
         catch(err){

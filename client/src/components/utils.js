@@ -1,6 +1,6 @@
 import logo from '../assets/logo.png'
 const getImage = async (formPrompt) => {
-    if (formPrompt != "") {
+    if (formPrompt !== "") {
         {
             try {
                 const response = await fetch('https://afterimage.onrender.com/api/v1/ai', {
@@ -25,7 +25,7 @@ const getImage = async (formPrompt) => {
 }
 const postImage = async ({name,formPrompt,imgUrl},navigate) => {
     
-    if (name != "" && formPrompt != "" && imgUrl != logo) {
+    if (name !== "" && formPrompt !== "" && imgUrl !== logo) {
         try {
             const response = await fetch('https://afterimage.onrender.com/api/v1/post', {
                 method: 'POST',

@@ -25,7 +25,7 @@ function FormField() {
     return (
         <div className='col-sm-12 col-md-12 col-xl-12 col-xxl-6 p-3' >
             <div className="card cardCss" >
-                {fullImg && imgUrl !=null ?
+                {fullImg && imgUrl !== null ?
                     <FullImg backToForm={()=>changeImgSize(false)} imgUrl={imgUrl} name={form.name} formPrompt={form.formPrompt}></FullImg>
                     :
                     <Form 
