@@ -3,7 +3,7 @@ const getImage = async (formPrompt) => {
     if (formPrompt != "") {
         {
             try {
-                const response = await fetch('http://localhost:1000/api/v1/ai', {
+                const response = await fetch('https://afterimage.onrender.com/api/v1/ai', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -27,7 +27,7 @@ const postImage = async ({name,formPrompt,imgUrl},navigate) => {
     
     if (name != "" && formPrompt != "" && imgUrl != logo) {
         try {
-            const response = await fetch('http://localhost:1000/api/v1/post', {
+            const response = await fetch('https://afterimage.onrender.com/api/v1/post', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
