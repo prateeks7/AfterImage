@@ -1,4 +1,5 @@
 import logo from '../assets/logo.png'
+import FileSaver from 'file-saver';
 const getImage = async (formPrompt) => {
     if (formPrompt !== "") {
         {
@@ -10,8 +11,8 @@ const getImage = async (formPrompt) => {
                     },
                     body: JSON.stringify({ prompt: formPrompt })
                 });
-                const data = JSON.parse(await response.json());
-                return data.output[0];
+                const data = await response.json();
+                return data;
             }
             catch (err) {
                 alert(err);
@@ -46,4 +47,9 @@ const postImage = async ({name,formPrompt,imgUrl},navigate) => {
     }
 }
 
-export {getImage,postImage};
+const downloadImg = (img) =>
+{
+    FileSaver.saveAs(img,'AfterImage.png');
+} 
+
+export {getImage,postImage,downloadImg};

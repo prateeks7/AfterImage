@@ -1,5 +1,5 @@
 import loader from '../assets/loading.svg';
-import {getImage,postImage} from './utils.js';
+import {getImage,postImage,downloadImg} from './utils.js';
 import { useNavigate } from 'react-router-dom';
 
 
@@ -28,7 +28,7 @@ function Form(props) {
         finally{
             props.isLoading.changeLoading(false);
         }
-    }   
+    } 
 
     function postObj(){
         return {
@@ -58,7 +58,10 @@ function Form(props) {
                 <img src={props.isLoading.value ? loader : props.imgUrl.value} className="gImageCss" onClick={()=>props.expandImg()}></img>
                 <br></br>
                 <br></br>
-                <button type="button" className="btn formBtnCss btn-lg" onClick={()=>postImage(postObj(),navigate)}>Share</button>
+                <div className="d-flex justify-content-center">
+                    <div className="p-1"><button type="button" className="btn formBtnCss btn-lg" onClick={()=>downloadImg(props.imgUrl.value)}>Download</button></div>
+                    <div className="p-1"><button type="button" className="btn formBtnCss btn-lg" onClick={()=>postImage(postObj(),navigate)}>Share</button></div>
+                </div>
             </div>}
         </div>
     )
