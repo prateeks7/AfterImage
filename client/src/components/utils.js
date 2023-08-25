@@ -1,7 +1,7 @@
 import logo from '../assets/loading.svg'
 import FileSaver from 'file-saver';
 const getImage = async (formPrompt) => {
-    const errorImg = "eyJlcnJvciI6Ik1vZGVsIGpvaG5zbGVnZXJzL2VwaWMtZGlmZnVzaW9uLXYxLjEgaXMgY3VycmVudGx5IGxvYWRpbmciLCJlc3RpbWF0ZWRfdGltZSI6MjAuMH0";
+    const errorImg = "eyJlcnJvciI6Ik1vZGVsIGpvaG5zbGVnZXJzL2VwaWMtZGlmZnVzaW9uLXYxLjEgaXMgY3VycmVudGx5IGxvYWRpbmciLCJlc3RpbWF0ZWRfdGltZSI6MjAuMH0=";
     if (formPrompt !== "") {
         {
             try {

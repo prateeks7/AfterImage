@@ -9,8 +9,8 @@ function Form(props) {
     const generateImg = async () => 
     {
         try{
+            await props.isLoading.changeLoading(true);
             props.displayImg.changeDisplayImg(true);
-            props.isLoading.changeLoading(true);
             const url = await getImage(props.formPrompt)
             if (url !== null) 
             {
