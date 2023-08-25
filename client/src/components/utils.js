@@ -1,6 +1,7 @@
-import logo from '../assets/logo.png'
+import logo from '../assets/loading.svg'
 import FileSaver from 'file-saver';
 const getImage = async (formPrompt) => {
+    const errorImg = "eyJlcnJvciI6Ik1vZGVsIGpvaG5zbGVnZXJzL2VwaWMtZGlmZnVzaW9uLXYxLjEgaXMgY3VycmVudGx5IGxvYWRpbmciLCJlc3RpbWF0ZWRfdGltZSI6MjAuMH0";
     if (formPrompt !== "") {
         {
             try {
@@ -12,16 +13,19 @@ const getImage = async (formPrompt) => {
                     body: JSON.stringify({ prompt: formPrompt })
                 });
                 const data = await response.json();
+                if(data !== errorImg)
                 return data;
+                else
+                throw "Please enter some more details in the description";
+
             }
             catch (err) {
-                alert(err);
+                throw err;
             }
         }
     }
     else {
-        alert("Please enter the description");
-        return null;
+        throw "Please enter the description";
     }
 }
 const postImage = async ({name,formPrompt,imgUrl},navigate) => {
