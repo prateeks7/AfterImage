@@ -17,8 +17,13 @@ router.route('/').post((req, res) => {
         body: JSON.stringify({"inputs": req.body.prompt}),
       }
     ).then(response => response.arrayBuffer()).then(result => {
+        
         const img = Buffer.from(result).toString("base64");
-        res.status(200).json("data:image/jpg;base64,"+img);
+
+        if(img===process.env.ERR_ERROR || img===process.env.ERR_BLACK)
+          res.status(200).json("ErrorRequest");
+        else
+          res.status(200).json("data:image/jpg;base64,"+img);
         });
 });
 

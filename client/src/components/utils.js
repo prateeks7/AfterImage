@@ -1,7 +1,6 @@
 import logo from '../assets/loading.svg'
 import FileSaver from 'file-saver';
 const getImage = async (formPrompt) => {
-    const errorImg = "eyJlcnJvciI6Ik1vZGVsIGpvaG5zbGVnZXJzL2VwaWMtZGlmZnVzaW9uLXYxLjEgaXMgY3VycmVudGx5IGxvYWRpbmciLCJlc3RpbWF0ZWRfdGltZSI6MjAuMH0=";
     if (formPrompt !== "") {
         {
             try {
@@ -13,7 +12,7 @@ const getImage = async (formPrompt) => {
                     body: JSON.stringify({ prompt: formPrompt })
                 });
                 const data = await response.json();
-                if(data !== errorImg)
+                if(data !== "ErrorRequest")
                 return data;
                 else
                 throw "Please enter some more details in the description";

@@ -11,7 +11,7 @@ function Form(props) {
         try{
             await props.isLoading.changeLoading(true);
             props.displayImg.changeDisplayImg(true);
-            const url = await getImage(props.formPrompt)
+            const url = await getImage(props.formPrompt);
             if (url !== null) 
             {
                 props.imgUrl.changeImgUrl(url);
