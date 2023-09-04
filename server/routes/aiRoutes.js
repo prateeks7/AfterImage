@@ -20,7 +20,7 @@ router.route('/').post((req, res) => {
         
         const img = Buffer.from(result).toString("base64");
 
-        if(img===process.env.ERR_ERROR || img===process.env.ERR_BLACK)
+        if(img===process.env.ERR_ERROR || img===process.env.ERR_BLACK || img===process.env.ERR_RANDOM)
           res.status(200).json("ErrorRequest");
         else
           res.status(200).json("data:image/jpg;base64,"+img);
