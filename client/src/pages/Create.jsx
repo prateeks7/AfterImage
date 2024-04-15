@@ -13,7 +13,7 @@ function Create()
                     Simply close your eyes, let your imagination run wild, and describe the image you envision. Whether it's a mystical creature, an alien landscape, a futuristic cityscape, or anything your heart desires. Share with the community if you desire.
                     <br></br>
                     <br></br>
-                    Thanks to <span style={{color: "#E6007E"}}>johnsleger's epic-diffusion-v1.1</span> AI Model
+                    Thanks to <span style={{color: "#E6007E"}}>AI Horde's</span> AI Model
                     <br></br>
                     Your Imagination Is The Only Limit!
             </PageD>

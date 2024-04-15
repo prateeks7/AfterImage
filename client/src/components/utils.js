@@ -12,10 +12,7 @@ const getImage = async (formPrompt) => {
                     body: JSON.stringify({ prompt: formPrompt })
                 });
                 const data = await response.json();
-                if(data !== "ErrorRequest")
                 return data;
-                else
-                throw "Please enter some more details in the description";
 
             }
             catch (err) {
