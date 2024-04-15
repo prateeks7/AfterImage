@@ -10,21 +10,29 @@ router.route('/').get((req, res) => {
   res.send("AI Good");
 });
 router.route('/').post((req, res) => {
-  fetch("https://api-inference.huggingface.co/models/johnslegers/epic-diffusion-v1.1",
-      {
-        headers: { Authorization: "Bearer "+process.env.AI_API_KEY },
-        method: "POST",
-        body: JSON.stringify({"inputs": req.body.prompt}),
+  fetch("https://stablehorde.net/api/v2/generate/async",
+    {
+      method: "POST",
+      headers: { 'accept': 'application/json', 'apikey': process.env.AI_API_KEY, 'Client-Agent': 'unknown:0:unknown', 'Content-Type': 'application/json' },
+      body: JSON.stringify({ "prompt": req.body.prompt })
+    }
+  ).then(
+    postResp => postResp.json().then(
+      idResp => {
+        function getImage() {
+          console.log(idResp.id)
+          fetch("https://stablehorde.net/api/v2/generate/status/" + idResp.id,
+            {
+              method: "GET",
+              headers: { 'accept': 'application/json', 'Client-Agent': 'unknown:0:unknown' }
+            }).then(
+              getResp => { getResp.json().then(imgResp => { console.log("imgResp"); if (imgResp.done) { res.status(200).json(imgResp.generations[0].img) } else { setTimeout(() => getImage(), 10000) } }) }
+            )
+        }
+        getImage();
       }
-    ).then(response => response.arrayBuffer()).then(result => {
-        
-        const img = Buffer.from(result).toString("base64");
-
-        if(img===process.env.ERR_ERROR || img===process.env.ERR_BLACK || img===process.env.ERR_RANDOM)
-          res.status(200).json("ErrorRequest");
-        else
-          res.status(200).json("data:image/jpg;base64,"+img);
-        });
+    )
+  );
 });
 
 export default router;
